@@ -110,14 +110,14 @@ int main(void)
 	  sFilterConfig2.IdType = FDCAN_STANDARD_ID;
 	  sFilterConfig2.FilterIndex = 0;
 	  sFilterConfig2.FilterType = FDCAN_FILTER_MASK;
-	  sFilterConfig2.FilterConfig = FDCAN_FILTER_TO_RXFIFO1;
+	  sFilterConfig2.FilterConfig = FDCAN_FILTER_TO_RXFIFO0;
 	  sFilterConfig2.FilterID1 = 0x000;
 	  sFilterConfig2.FilterID2 = 0x000;
 
 	  HAL_FDCAN_ConfigFilter(&hfdcan2, &sFilterConfig2);
 	  HAL_FDCAN_Init(&hfdcan2);
 	  HAL_FDCAN_Start(&hfdcan2);
-	  HAL_FDCAN_ActivateNotification(&hfdcan2, FDCAN_IT_RX_FIFO1_NEW_MESSAGE, 0);
+	  HAL_FDCAN_ActivateNotification(&hfdcan2, FDCAN_IT_RX_FIFO0_NEW_MESSAGE, 0);
 int counter = 0;
   /* USER CODE END 2 */
 
